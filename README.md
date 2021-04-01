@@ -1,6 +1,6 @@
 # ANN-2-layers
 
-this is a neural network based on artificial intelligence concepts.
+this is a MLP based on artificial intelligence concepts.
 This ANN is configured to recognize 7-segment display to corresponding digit
 To use, the first action is to train this neural network then to execute.
 Change the input file to use a different problem with the cases to analyze the machine for every line
