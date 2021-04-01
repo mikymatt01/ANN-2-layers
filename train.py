@@ -40,17 +40,17 @@ def main():
         oracolo=open("oracolo.txt","r")
         for line in init:
             
-            #fase lettura input e output desiderato
+            #input and output
             layer1.m=gest.read(line)
             layer2.d=gest.read(oracolo.readline())
             
-            #attivazione rete neurale
+            #activate network
             RN.RN(layer1,layer2)
             
-            #calibrazione pesi strato esterno
+            #calibrate weights layer 2
             layer2.w=RN.calibrate_outlayer(layer2.w,rate,layer2.y,layer2.d,layer2.m,layer2.perc,layer2.dend,layer2.s)
             
-            #calibrazione strato interno
+            #calibrate weights layer 1
             layer1.w=RN.calibrate_deeplayer(layer1,rate,layer2)
 
             if(i==cicli-2):
@@ -63,7 +63,7 @@ def main():
         init.close()
         oracolo.close()
 
-    #fase salvataggio pesi
+    #saved weights
     gest.write(weight,layer1.w,layer1.dend,layer1.perc)
     gest.write(weight,layer2.w,layer2.dend,layer2.perc)
 
