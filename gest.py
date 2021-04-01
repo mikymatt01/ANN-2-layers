@@ -8,7 +8,7 @@ def write(file,w,dend,perc):
             file.write(str(w[i*dend+j]))
             file.write("\n")
 
-def randomWeight(w,perc,dend):#genera pesi random per ogni livello
+def randomWeight(w,perc,dend):#generate random weights every layers
     for i in range(perc):
         for j in range(dend):
             w.append(random.random())

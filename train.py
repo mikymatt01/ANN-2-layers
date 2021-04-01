@@ -37,12 +37,12 @@ def main():
 
     for i in progressbar.progressbar(range(cicli)):
         init=open("input.txt","r")
-        oracolo=open("oracolo.txt","r")
+        oracle=open("oracle.txt","r")
         for line in init:
             
-            #input and output
+            #input e output
             layer1.m=gest.read(line)
-            layer2.d=gest.read(oracolo.readline())
+            layer2.d=gest.read(oracle.readline())
             
             #activate network
             RN.RN(layer1,layer2)
@@ -61,9 +61,9 @@ def main():
                 print("\n")
 
         init.close()
-        oracolo.close()
+        oracle.close()
 
-    #saved weights
+    #saved weights 
     gest.write(weight,layer1.w,layer1.dend,layer1.perc)
     gest.write(weight,layer2.w,layer2.dend,layer2.perc)
 

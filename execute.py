@@ -5,13 +5,13 @@ import gest
 def main():
     gest.openW(train.layer1,train.layer2)
 
-    #fase lettura input e output desiderato
+    #input
     train.layer1.m=[]
     for j in range(train.layer1.dend):
         a=int(input())
         train.layer1.m.append(a)
 
-    #attivazione rete neurale
+    #activate network
     RN.RN(train.layer1,train.layer2)
 
     #print output network
