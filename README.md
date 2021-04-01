@@ -6,3 +6,4 @@ Change the input file with the cases to analyze the machine for every line
 change the oracle file with the results corresponding the inputs
 execute this program and digit "train"
 when the train is finished digit "execute" and enjoy the process
+[a link](https://github.com/mikymatt01/ANN-2-layers/blob/main/structure.PNG)
