@@ -3,7 +3,16 @@ import RN
 import gest
 
 def main():
-    gest.openW(train.layer1,train.layer2)
+    try:
+        weight=open("weights.txt","r")
+        for line in weight:
+            gest.openW(train.layer1,line)
+            gest.openW(train.layer2,line)
+        weight.close()
+    except IOError:
+        gest.randomWeight(train.layer1.w,train.layer1.perc,train.layer1.dend)
+        gest.randomWeight(train.layer2.w,train.layer2.perc,train.layer2.dend)
+
 
     #input
     train.layer1.m=[]
