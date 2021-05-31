@@ -8,3 +8,6 @@ change the oracle file with the results corresponding the inputs
 execute "main" program and digit "train"
 when the train is finished digit "execute" and enjoy the process
 [ANN structure](https://github.com/mikymatt01/ANN-2-layers/blob/main/structure.PNG)
+
+## python modules
+pip install progressbar2
